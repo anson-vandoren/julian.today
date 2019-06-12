@@ -1,0 +1,22 @@
+main {
+  max-width: 88ch;
+  padding: 2ch;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 2.5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 6rem);
+}
+
+#ordinal-day {
+  text-decoration: underline;
+}
