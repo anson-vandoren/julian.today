@@ -1,12 +1,25 @@
+/* * {
+  outline: 1px dashed darkblue;
+} */
+
+html,
+body {
+  height: calc(100% - 1ch);
+}
+
 main {
-  max-width: 88ch;
-  padding: 2ch;
+  padding: 0 2ch;
+}
+
+main,
+footer {
+  max-width: 90ch;
   margin: auto;
 }
 
 h1 {
-  font-family: 'Encode Sans Expanded', sans-serif;
   font-size: 2.5em;
+  font-family: 'Encode Sans Expanded', sans-serif;
 }
 
 .container {
@@ -14,9 +27,43 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 6rem);
+  height: calc(100% - 32px);
 }
 
 #ordinal-day {
   text-decoration: underline;
+}
+
+a {
+  color: #435a6b;
+  text-decoration: none;
+  padding: 8px 0;
+  position: relative;
+}
+
+a:hover::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+
+  border-width: 0 0 1px;
+  border-style: solid;
+}
+
+/* a:hover {
+  text-decoration: underline;
+} */
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 32px;
+  width: 50ch;
+
+  font-family: 'Encode Sans Expanded', sans-serif;
+  font-size: 12px;
 }
