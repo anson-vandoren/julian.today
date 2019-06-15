@@ -83,20 +83,21 @@ document.addEventListener('click', (e) => {
 function updateWithDay() {
   // check if it's a leap year to get max days in the year
   const currYear = new Date().getFullYear();
-
   const daysThisYear = !(currYear & 3 || (!(currYear % 25) && currYear & 15))
     ? 366
     : 365;
 
-  const newDay = Math.min(daysThisYear, Math.max(parseInt(dayInput.value), 1));
+  // validate input day of the year
+  let newDay = Math.min(daysThisYear, Math.max(parseInt(dayInput.value), 1));
   if (isNaN(newDay)) {
-    dayInput.value = 1;
-    return;
+    newDay = '';
   }
 
-  let newDate = new Date(new Date().getFullYear(), 0, 0);
+  // create a Date from the given day of the year
+  let newDate = new Date(currYear, 0, 0);
   newDate.setDate(newDate.getDate() + newDay);
 
+  // determine verb tense
   const todayDate = new Date().julian();
   const otherDate = newDate.julian();
   let tense;
