@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded&display=swap');
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 8px;
-  min-height: calc(100vh - 16px);
+  min-height: calc(100% - 16px);
   display: grid;
   grid-template-rows: 1fr auto;
 }
