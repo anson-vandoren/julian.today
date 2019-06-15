@@ -13,7 +13,12 @@
   </head>
   <body>
     <main>
-      <h1>Today is the <span id="ordinal-day"></span> day of the year</h1>
+      <h1>
+        <span id="day-prefix">Today is the </span><span id="ordinal-day"></span
+        ><input type="number" hidden id="day-input" /><span id="day-suffix">
+          day of the year</span
+        >
+      </h1>
     </main>
     <footer class="bottom-nav">
       <a href="about.html">ABOUT</a>
