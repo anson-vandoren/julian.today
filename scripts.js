@@ -140,5 +140,6 @@ function showInput(shouldShow) {
     daySuffix.innerHTML = ' day of the year';
   } else {
     dayInput.focus();
+    dayInput.select();
   }
 }
